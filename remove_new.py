@@ -50,8 +50,9 @@ def processImage(image):
 
 
 
-def main(threads):
+def main(threads=4):
     imagelist = os.listdir(os.getcwd()+"\\images")
+    print("Processing Images")
     with Pool(threads) as pool:
         pool.map(processImage, imagelist)
 
